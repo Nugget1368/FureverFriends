@@ -6,21 +6,6 @@ main {
       width: 100%;
       margin: .3rem;
     }
-    aside{
-      @include flex();
-      background-color: $color-2;
-      border-radius: 15px;
-      @include border(3px, $color-1);
-      width: 100%;
-      h4{
-        text-align: start;
-        width: 100%;
-        margin: .3rem;
-        text-decoration: underline;
-        font-size: $medium;
-        color: #d30a53;
-      }
-    }
   }
 
   section.hero {
@@ -76,6 +61,31 @@ main {
     box-sizing: border-box;
     padding: 10px;
   }
+  .btn {
+    @include border(2px, $color-3-dark);
+    width: 100%;
+    text-decoration: none;
+    font-size: $medium;
+    padding: 5px;
+    background-color: $color-3;
+    border-radius: 3px;
+    transition: 0.1s;
+    color: #000;
+    text-align: center;
+  }
+  .btn:hover {
+    background-color: $color-4;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .btn:active {
+    transform: scale(0.93);
+    box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
+  
+    background-color: $color-4-light;
+    text-decoration: none;
+    color: #000;
+  }
   .with-undertitle {
     border: none;
     margin: 0px;
@@ -109,6 +119,21 @@ main {
     background-color: $white;
     max-width: $max-width;
     min-width: $min-width;
+    aside{
+      @include flex();
+      background-color: $color-2;
+      border-radius: 15px;
+      @include border(3px, $color-1);
+      width: 100%;
+      h4{
+        text-align: start;
+        width: 100%;
+        margin: .3rem;
+        text-decoration: underline;
+        font-size: $medium;
+        color: #d30a53;
+      }
+    }
     > div {
       @include flex(column);
       box-sizing: border-box;
@@ -153,32 +178,6 @@ main {
     border-bottom: 3px solid $color-1;
     margin: 0.8rem;
   }
-}
-
-.btn {
-  @include border(2px, $color-3-dark);
-  width: 100%;
-  text-decoration: none;
-  font-size: $medium;
-  padding: 5px;
-  background-color: $color-3;
-  border-radius: 3px;
-  transition: 0.1s;
-  color: #000;
-  text-align: center;
-}
-.btn:hover {
-  background-color: $color-4;
-  cursor: pointer;
-  transition: 0.1s;
-}
-.btn:active {
-  transform: scale(0.93);
-  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
-
-  background-color: $color-4-light;
-  text-decoration: none;
-  color: #000;
 }
 
 @keyframes gradient-background {

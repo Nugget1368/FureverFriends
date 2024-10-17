@@ -9,24 +9,6 @@ main article.about-card p {
   width: 100%;
   margin: 0.3rem;
 }
-main article.about-card aside {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffc8dd;
-  border-radius: 15px;
-  border: 3px solid #ffafcc;
-  width: 100%;
-}
-main article.about-card aside h4 {
-  text-align: start;
-  width: 100%;
-  margin: 0.3rem;
-  text-decoration: underline;
-  font-size: 18px;
-  color: #d30a53;
-}
 main section.hero {
   width: 100%;
   border-top: 10px solid #58aeff;
@@ -79,6 +61,30 @@ main section:not(section.hero) {
   box-sizing: border-box;
   padding: 10px;
 }
+main .btn {
+  border: 2px solid #58aeff;
+  width: 100%;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  background-color: #a2d2ff;
+  border-radius: 3px;
+  transition: 0.1s;
+  color: #000;
+  text-align: center;
+}
+main .btn:hover {
+  background-color: #bde0fe;
+  cursor: pointer;
+  transition: 0.1s;
+}
+main .btn:active {
+  transform: scale(0.93);
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
+  background-color: #ddefff;
+  text-decoration: none;
+  color: #000;
+}
 main .with-undertitle {
   border: none;
   margin: 0px;
@@ -118,6 +124,24 @@ main article {
   background-color: #fafafa;
   max-width: 500px;
   min-width: 250px;
+}
+main article aside {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc8dd;
+  border-radius: 15px;
+  border: 3px solid #ffafcc;
+  width: 100%;
+}
+main article aside h4 {
+  text-align: start;
+  width: 100%;
+  margin: 0.3rem;
+  text-decoration: underline;
+  font-size: 18px;
+  color: #d30a53;
 }
 main article > div {
   display: flex;
@@ -169,33 +193,6 @@ main h3 {
   text-align: center;
   border-bottom: 3px solid #ffafcc;
   margin: 0.8rem;
-}
-
-.btn {
-  border: 2px solid #58aeff;
-  width: 100%;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px;
-  background-color: #a2d2ff;
-  border-radius: 3px;
-  transition: 0.1s;
-  color: #000;
-  text-align: center;
-}
-
-.btn:hover {
-  background-color: #bde0fe;
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.btn:active {
-  transform: scale(0.93);
-  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
-  background-color: #ddefff;
-  text-decoration: none;
-  color: #000;
 }
 
 @keyframes gradient-background {
