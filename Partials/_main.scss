@@ -147,6 +147,7 @@ main {
       p {
         font-size: $medium;
         text-align: center;
+        overflow-wrap:anywhere;
       }
     }
     footer {

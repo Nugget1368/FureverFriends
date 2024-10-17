@@ -160,6 +160,7 @@ main article > div > div {
 main article > div p {
   font-size: 18px;
   text-align: center;
+  overflow-wrap: anywhere;
 }
 main article footer {
   display: flex;
