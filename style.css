@@ -91,6 +91,12 @@ main article > div {
   box-sizing: border-box;
   padding: 1rem;
 }
+main article > div > div {
+  background-color: #efefef;
+  border-radius: 15px;
+  margin: 0.8rem 0px;
+  padding: 1rem;
+}
 main article > div p {
   font-size: 18px;
   text-align: center;
@@ -128,6 +134,19 @@ main h3 {
   text-align: center;
   border-bottom: 3px solid #ffafcc;
   margin: 0.8rem;
+}
+main .with-undertitle {
+  border: none;
+  margin: 0px;
+}
+main .with-undertitle + h4 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #434343;
+  border-bottom: 3px solid #ffafcc;
 }
 
 .btn {
@@ -294,4 +313,8 @@ h2 {
 
 h3 {
   font-size: 22px;
+}
+
+h4 {
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
