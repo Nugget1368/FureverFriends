@@ -3,14 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
     <header></header>
     <main>
-        <h2>Coming soon....</h2>
-        <a href="index.html" class="btn">Go Back</a>
+
+      <div class="contactpage-wrapper">
+        <form>
+          <h2>Contact Us</h2>
+          <div class="first-last-name">
+            <div class="first-name">
+              <label for="first-name">First name:</label><br>
+              <input type="text" id="first-name" name="first-name" placeholder="Your first name">
+            </div>
+            <div class="last-name">
+              <label for="last-name">Last name:</label><br>
+              <input type="text" id="last-name" name="last-name" placeholder="Your last name">
+            </div>
+          </div>
+          <div class="petname-email">
+            <div class="pet-name">
+              <label for="pet-name">Pet name:</label><br>
+              <input type="text" id="pet-name" name="pet-name" placeholder="Your pets name">
+            </div>
+            <div class="email">
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="">
+            </div>
+          </div>
+          <div class="subject">
+            <label for="subject">Subject:</label>
+            <select id="subject">
+              <option value="Haircuts">Complaints on haircuts</option>
+              <option value="Poopy">Poopy bag is to small</option>
+              <option value="Question">Option 3</option>
+              <option value="Other">Option 4</option>
+            </select>
+          </div>
+          <div class="explain-matter">
+            <label for="explain-matter">Explain the matter:</label>
+            <textarea name="explain-matter" id="explain-matter" name="explain-matter" placeholder="Explain the matter..."></textarea>
+          </div>
+          <div class="buttons">
+            <button class="btn">Submit</button>
+            <button class="btn btn-goback">Go Back</button>
+          </div>
+        </form>
+      </div>
+
     </main>
-    <footer></footer>
+
+    <footer>
+      <div class="footer-wrapper">
+          <div class="footer-upper">
+              <div class="footer-address">
+                  <span>Adress 999</span>
+                  <span>999 99 Kattstaden</span>
+                  <span>Box 99999</span>
+              </div>
+              <div class="footer-logotype"><p>Logotype</p></div>
+              <div class="footer-links">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Our Products</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <hr>
+              <p>&copy;2024 www.fureverfriends.com - All Rights Reserved.</p>
+          </div>
+      </div>
+  </footer>
+
   </body>
 </html>
