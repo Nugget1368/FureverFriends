@@ -61,6 +61,31 @@ main {
     box-sizing: border-box;
     padding: 10px;
   }
+  .big-image{
+    @include flex();
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(transparent,$color-3, $color-1);
+    background-repeat: no-repeat; 
+    margin: 0px;
+    border-bottom: 2px solid #000;
+    @include desktop(){
+      background-image: linear-gradient(transparent 50%,$color-1, $color-3),url("/Images/forest.png");
+      // background-repeat: no-repeat; 
+      background-size: 100% 100%; 
+    }
+    h2{
+      max-width: $max-width;
+      padding: 0px 30px;
+    }
+    article{
+      background-color: $color-4-light;
+      >div>div{
+        background-color: #fff;        
+      }
+    }
+  }
+
   .btn {
     @include border(2px, $color-3-dark);
     width: 100%;

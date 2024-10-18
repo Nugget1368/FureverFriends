@@ -61,6 +61,34 @@ main section:not(section.hero) {
   box-sizing: border-box;
   padding: 10px;
 }
+main .big-image {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(transparent, #a2d2ff, #ffafcc);
+  background-repeat: no-repeat;
+  margin: 0px;
+  border-bottom: 2px solid #000;
+}
+@media (width > 998px) {
+  main .big-image {
+    background-image: linear-gradient(transparent 50%, #ffafcc, #a2d2ff), url("/Images/forest.png");
+    background-size: 100% 100%;
+  }
+}
+main .big-image h2 {
+  max-width: 500px;
+  padding: 0px 30px;
+}
+main .big-image article {
+  background-color: #ddefff;
+}
+main .big-image article > div > div {
+  background-color: #fff;
+}
 main .btn {
   border: 2px solid #58aeff;
   width: 100%;
