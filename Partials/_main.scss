@@ -101,7 +101,7 @@ main {
   }
   figure {
     @include flex(row wrap);
-    position: relative;
+     position: relative;
     width: 100%;
     min-width: $min-width;
     margin: 0px;
