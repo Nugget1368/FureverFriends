@@ -113,12 +113,63 @@ main {
     border-bottom: 3px solid $color-1;
     margin: 0.8rem;
   }
-
+  
   .contactpage-wrapper {
     @include flex($direction:column, $justify:flex-start, $align:center);
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: 30px 0;
+    
+    .contact-us-info {
+      @include flex($direction:column, $align:center);
+      @include box-shadow();
+      @include border(1px, #000);
+      padding: 1rem;
+      background-color: $white;
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 60px;
+
+      h2 {
+        font-size: 1.3rem;
+
+        span {
+          font-size: 0.5rem;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      hr {
+        margin: 15px 0;
+        width: 80%;
+        height: 1px;
+        color: #7e7e7e;
+        background: #7e7e7e;
+        font-size: 0;
+        border: 0;
+
+        @include desktop {
+            display: none;
+        }
+      }
+
+      .address-box {
+        @include flex($direction:row, $justify:space-around, $align:center);
+        width: 100%;
+
+        .visit-address, .call-us {
+          @include flex($direction:column, $align:center);
+        }
+
+        .call-us {
+          align-self: flex-start;
+        }
+      }
+
+    }
     
     form {
       @include box-shadow();
@@ -126,10 +177,20 @@ main {
       padding: 1rem;
       background-color: $white;
       width: 80%;
-      max-width: 250px;
-        > h2 {
-        margin: 0 0 20px 0;
-      }
+      max-width: 300px;
+      margin-bottom: 50px;
+
+        input {
+          width: 100%;
+        }
+
+        select {
+          width: 60%;
+        }
+
+        h2 {
+          margin: 0 0 20px 0;
+        }
 
         .first-last-name, .petname-email, .subject, .explain-matter {
           @include flex(column);
@@ -140,13 +201,34 @@ main {
           margin-bottom: 10px;
         }
 
-        .subject, .explain-matter  {
+        .subject, .explain-matter {
           margin-bottom: 20px;
         }
-      }    
-  }
-  
 
+        .explain-matter textarea {
+          margin-top: 5px;
+          width: 90%;
+          height: 60px;
+          resize: vertical;
+          overflow: auto;
+        }
+
+        .buttons {
+          @include flex(column);
+
+          .btn:first-child {
+            margin-bottom: 10px;
+            width: 70%;
+            background-color: $color-3-dark;
+          }
+
+          .btn:last-child {
+            width: 70%;
+            background-color: rgb(206, 230, 252);
+          }
+        }
+      }
+  }
 }
 
 .btn {
