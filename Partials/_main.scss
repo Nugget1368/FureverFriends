@@ -1,91 +1,64 @@
 main {
   @include flex(column, flex-start);
-  article.about-card{
-    p{
+  article.about-card {
+    p {
       text-align: start;
       width: 100%;
-      margin: .3rem;
+      margin: 0.3rem;
+    }
+  }
+  section.hero {
+    @include flex($justify: flex-start);
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#fff 50%, $color-3, $color-1);
+    background-repeat: no-repeat;
+    margin: 0px;
+    border-bottom: 2px solid #000;
+    @include desktop() {
+      background-image: linear-gradient(transparent 50%, $color-1, $color-3),
+        url("/Images/forest.png");
+      background-size: 100% 100%;
+    }
+    article {
+      background-color: $color-4-light;
+      > div > div {
+        background-color: #fff;
+      }
+    }
+    > header:first-child {
+      margin: 50px 0px 0px 0px;
+      width: 100%;
+      background-color: #ffffffc4;
+      border: 4px solid rgba(162, 210, 255, 0.729);
+      border-left: 0px;
+      border-right: 0px;
+      @include flex();
+      h1,
+      h2 {
+        text-align: center;
+        margin: 5px;
+        border: none;
+      }
+      h2 {
+        color: #0858a3;
+        font-size: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    > header.title {
+      position: absolute;
+      top: 20%;
     }
   }
 
-  section.hero {
-    width: 100%;
-    border-top: 10px solid $color-3-dark;
-    border-bottom: 10px solid $color-3-dark;
-    height: 100vh;
-    background: linear-gradient(
-      -45deg,
-      $color-3,
-      $color-2,
-      $color-3-dark,
-      $color-2,
-      $color-3
-      );
-      background-size: 400% 400%;
-      animation: gradient-background 20s ease infinite;
-      > div:first-child {
-        @include flex();
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        background-color: $color-3-dark;
-        background-color: #1a7dda;
-        box-shadow: inset 0px 2px #fff, inset 0px -2px #fff;
-        padding: 5px 0px;
-        border-top: 5px solid $color-3-dark;
-        border-bottom: 5px solid $color-3-dark;
-        h1,
-        h2 {
-          width: fit-content;
-          color: #fff;
-          text-align: center;
-          font-size: 1.5rem;
-          margin: 0px;
-          border: none;
-        }
-      h1 {
-        font-size: 2rem;
-        border-bottom: 3px solid $color-3;
-      }
-    }
-    > figure:first-child {
-      border-top: 5px solid #fff;
-      border-bottom: 5px solid #fff;
-    }
-  }
-  
   section:not(section.hero) {
     @include flex();
     box-sizing: border-box;
     padding: 10px;
   }
-  .big-image{
-    @include flex();
-    width: 100vw;
-    min-height: 100vh;
-    background-image: linear-gradient(transparent,$color-3, $color-1);
-    background-repeat: no-repeat; 
-    margin: 0px;
-    border-bottom: 2px solid #000;
-    @include desktop(){
-      background-image: linear-gradient(transparent 50%,$color-1, $color-3),url("/Images/forest.png");
-      // background-repeat: no-repeat; 
-      background-size: 100% 100%; 
-    }
-    h2{
-      max-width: $max-width;
-      padding: 0px 30px;
-    }
-    article{
-      background-color: $color-4-light;
-      >div>div{
-        background-color: #fff;        
-      }
-    }
-  }
-
   .btn {
     @include border(2px, $color-3-dark);
     width: 100%;
@@ -106,7 +79,7 @@ main {
   .btn:active {
     transform: scale(0.93);
     box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
-  
+
     background-color: $color-4-light;
     text-decoration: none;
     color: #000;
@@ -126,7 +99,7 @@ main {
   }
   figure {
     @include flex(row wrap);
-     position: relative;
+    position: relative;
     width: 100%;
     max-height: 290px;
     background-color: #1a7dda;
@@ -147,16 +120,16 @@ main {
     background-color: $white;
     max-width: $max-width;
     min-width: $min-width;
-    aside{
+    aside {
       @include flex();
       background-color: $color-2;
       border-radius: 15px;
       @include border(3px, $color-1);
       width: 100%;
-      h4{
+      h4 {
         text-align: start;
         width: 100%;
-        margin: .3rem;
+        margin: 0.3rem;
         text-decoration: underline;
         font-size: $medium;
         color: #d30a53;
@@ -175,7 +148,7 @@ main {
       p {
         font-size: $medium;
         text-align: center;
-        overflow-wrap:anywhere;
+        overflow-wrap: anywhere;
       }
     }
     footer {
@@ -206,17 +179,5 @@ main {
     text-align: center;
     border-bottom: 3px solid $color-1;
     margin: 0.8rem;
-  }
-}
-
-@keyframes gradient-background {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
