@@ -70,6 +70,69 @@ main section:not(section.hero) {
   box-sizing: border-box;
   padding: 10px;
 }
+main input:checked + div {
+  display: none;
+}
+main section.product-row {
+  display: flex;
+  flex-flow: row wrap !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main section.product-row > article {
+  max-width: 150px;
+  margin: 10px;
+  /*prevent wierd border*/
+  box-shadow: 1px -1px #000;
+  border-right: none;
+  border-top: none;
+}
+main section.product-row > article figure {
+  border-bottom: 1px solid #000;
+}
+main section.product-row > article header {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main section.product-row > article header h3 {
+  margin: 2px 0px;
+  text-align: start;
+}
+main section.product-row > article footer {
+  margin-top: 15px;
+}
+main section.product-row > article div {
+  border-radius: 0px;
+}
+main section.product-row > article div > div {
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+main section.product-row > article div > p {
+  height: 110px;
+  text-align: start;
+  overflow: hidden;
+}
+main section.product-row > article footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main section.product-row > article footer > p {
+  text-align: start;
+  margin: 0px 0px 5px 0px;
+}
+main section.product-row > article:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
 main .btn {
   border: 2px solid #58aeff;
   width: 100%;
@@ -112,7 +175,6 @@ main figure {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 100%;
   max-height: 290px;
   background-color: #1a7dda;
