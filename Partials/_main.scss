@@ -1,8 +1,185 @@
-/*this is main wrapper in which everything will be wrapped and made it parent so given position relative
-.main{
-    height: 100%;
+
+main {
+  @include flex(column, flex-start);
+  article.about-card {
+    p {
+      text-align: start;
+      width: 100%;
+      margin: 0.3rem;
+    }
+  }
+  section.hero {
+    @include flex($justify: flex-start);
     width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#fff 50%, $color-3, $color-1);
+    background-repeat: no-repeat;
+    margin: 0px;
+    border-bottom: 2px solid #000;
+    @include desktop() {
+      background-image: linear-gradient(transparent 50%, $color-1, $color-3),
+        url("/Images/forest.png");
+      background-size: 100% 100%;
+    }
+    article {
+      background-color: $color-4-light;
+      > div > div {
+        background-color: #fff;
+      }
+    }
+    > header:first-child {
+      margin: 50px 0px 0px 0px;
+      width: 100%;
+      background-color: #ffffffc4;
+      border: 4px solid rgba(162, 210, 255, 0.729);
+      border-left: 0px;
+      border-right: 0px;
+      @include flex();
+      h1,
+      h2 {
+        text-align: center;
+        margin: 5px;
+        border: none;
+      }
+      h2 {
+        color: #0858a3;
+        font-size: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    > header.title {
+      position: absolute;
+      top: 20%;
+    }
+  }
+
+  section:not(section.hero) {
+    @include flex();
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .btn {
+    @include border(2px, $color-3-dark);
+    width: 100%;
+    text-decoration: none;
+    font-size: $medium;
+    padding: 5px;
+    background-color: $color-3;
+    border-radius: 3px;
+    transition: 0.1s;
+    color: #000;
+    text-align: center;
+  }
+  .btn:hover {
+    background-color: $color-4;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .btn:active {
+    transform: scale(0.93);
+    box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
+
+    background-color: $color-4-light;
+    text-decoration: none;
+    color: #000;
+  }
+  .with-undertitle {
+    border: none;
+    margin: 0px;
+  }
+  .with-undertitle + h4 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #434343;
+    border-bottom: 3px solid $color-1;
+  }
+  figure {
+    @include flex(row wrap);
     position: relative;
+    width: 100%;
+    max-height: 290px;
+    background-color: #1a7dda;
+    min-width: $min-width;
+    margin: 0px;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  article {
+    @include flex();
+    @include box-shadow();
+    @include border(1px, #000);
+    margin: 1rem;
+    background-color: $white;
+    max-width: $max-width;
+    min-width: $min-width;
+    aside {
+      @include flex();
+      background-color: $color-2;
+      border-radius: 15px;
+      @include border(3px, $color-1);
+      width: 100%;
+      h4 {
+        text-align: start;
+        width: 100%;
+        margin: 0.3rem;
+        text-decoration: underline;
+        font-size: $medium;
+        color: #d30a53;
+      }
+    }
+    > div {
+      @include flex(column);
+      box-sizing: border-box;
+      padding: 1rem;
+      > div {
+        background-color: #efefef;
+        border-radius: 15px;
+        margin: 0.8rem 0px;
+        padding: 1rem;
+      }
+      p {
+        font-size: $medium;
+        text-align: center;
+        overflow-wrap: anywhere;
+      }
+    }
+    footer {
+      @include flex(column);
+      height: fit-content;
+      width: 100%;
+      background-color: transparent;
+      a {
+        width: 100%;
+      }
+    }
+  }
+
+  aside {
+    @include flex();
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid $color-3;
+    margin: 1rem;
+  }
+  h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid $color-1;
+    margin: 0.8rem;
+  }
 }
-written by mansi    
-*/
+
