@@ -59,10 +59,78 @@ main {
     box-sizing: border-box;
     padding: 10px;
   }
+  section.products-header {
+    width: 100%;
+    background-color: $color-4;
+    padding: 0px !important;
+
+    .thing {
+      width: 100%;
+      background-color: $color-1;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      #toggle {
+        display: none;
+      }
+      .product-row {
+        width: 100%;
+        max-width: none;
+        @include flex(column);
+        > a {
+          width: 100%;
+          @include flex();
+          padding: 15px 0px;
+          color: #000;
+          text-decoration: none;
+          font-size: $medium;
+          background-color: $color-1;
+          transition: 0.2s;
+          &:hover {
+            transition: 0.2s;
+            background-color: $color-2;
+          }
+          &:active {
+            transform: scale(0.93);
+            box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
+          }
+        }
+        input[type="checkbox"] {
+          cursor: pointer;
+          appearance: none;
+          height: 20px;
+          width: 20px;
+          border-bottom: 3px solid #000;
+          border-right: 3px solid #000;
+          transform: rotate(45deg);
+          transition: 0.2s;
+          margin: 5px 10px 0px 10px;
+        }
+        input[type="checkbox"]:checked {
+          margin: 15px 10px 0px 10px;
+          transform: rotate(225deg);
+          transition: 0.2s;
+        }
+        input[type="checkbox"]:checked ~ .product-row {
+          display: none;
+        }
+      }
+      @include desktop() {
+        > .product-row {
+          @include flex(row nowrap !important);
+          a {
+            width: fit-content;
+            padding: 15px;
+          }
+        }
+      }
+
+    }
+  }
+
   .product-row {
     @include flex(row wrap);
     max-width: 900px;
-    *{
+    * {
       // text-align: start;
     }
     width: 100%;
@@ -72,7 +140,7 @@ main {
       /*prevent wierd border*/
       box-shadow: 1px -1px #000;
       border-right: none;
-      border-top:none;
+      border-top: none;
       figure {
         border-bottom: 1px solid #000;
       }
@@ -84,9 +152,8 @@ main {
           text-align: start;
         }
       }
-      footer{
-        margin-top: 15px; 
-
+      footer {
+        margin-top: 15px;
       }
       div {
         border-radius: 0px;
@@ -99,22 +166,21 @@ main {
         > p {
           height: 110px;
           text-align: start;
-          overflow: hidden
+          overflow: hidden;
         }
       }
-      footer{
-        @include flex($align:flex-start);
-        >p{
+      footer {
+        @include flex($align: flex-start);
+        > p {
           text-align: start;
           margin: 0px 0px 5px 0px;
         }
       }
     }
-    >article:hover{
-      transition: .2s;
+    > article:hover {
+      transition: 0.2s;
       transform: scale(1.1);
     }
-    
   }
   .btn {
     @include border(2px, $color-3-dark);
