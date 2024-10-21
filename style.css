@@ -70,17 +70,15 @@ main section:not(section.hero) {
   box-sizing: border-box;
   padding: 10px;
 }
-main input:checked + div {
-  display: none;
-}
-main section.product-row {
+main .product-row {
   display: flex;
-  flex-flow: row wrap !important;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  max-width: 900px;
   width: 100%;
 }
-main section.product-row > article {
+main .product-row > article {
   max-width: 150px;
   margin: 10px;
   /*prevent wierd border*/
@@ -88,48 +86,48 @@ main section.product-row > article {
   border-right: none;
   border-top: none;
 }
-main section.product-row > article figure {
+main .product-row > article figure {
   border-bottom: 1px solid #000;
 }
-main section.product-row > article header {
+main .product-row > article header {
   width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
 }
-main section.product-row > article header h3 {
+main .product-row > article header h3 {
   margin: 2px 0px;
   text-align: start;
 }
-main section.product-row > article footer {
+main .product-row > article footer {
   margin-top: 15px;
 }
-main section.product-row > article div {
+main .product-row > article div {
   border-radius: 0px;
 }
-main section.product-row > article div > div {
+main .product-row > article div > div {
   background-color: transparent;
   border-radius: 0px;
   padding: 0px;
   margin: 0px;
 }
-main section.product-row > article div > p {
+main .product-row > article div > p {
   height: 110px;
   text-align: start;
   overflow: hidden;
 }
-main section.product-row > article footer {
+main .product-row > article footer {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
 }
-main section.product-row > article footer > p {
+main .product-row > article footer > p {
   text-align: start;
   margin: 0px 0px 5px 0px;
 }
-main section.product-row > article:hover {
+main .product-row > article:hover {
   transition: 0.2s;
   transform: scale(1.1);
 }

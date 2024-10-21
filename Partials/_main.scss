@@ -59,11 +59,9 @@ main {
     box-sizing: border-box;
     padding: 10px;
   }
-input:checked+div{
-display: none;
-}
-  section.product-row {
-    @include flex(row wrap !important);
+  .product-row {
+    @include flex(row wrap);
+    max-width: 900px;
     *{
       // text-align: start;
     }
