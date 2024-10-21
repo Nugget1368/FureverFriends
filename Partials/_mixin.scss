@@ -13,8 +13,8 @@
     border: $size solid $color;
 
 }
-mixin hover-bg($color){
+@mixin hover-bg($color){
     &:hover{
-        backgroung-color:$color;
+        background-color:$color;
     }
 }
