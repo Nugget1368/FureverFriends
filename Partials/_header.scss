@@ -23,11 +23,11 @@
     top: 0;
     left: 0;
     height: 100vh;
-    width: 200px;
+    width: 250px;
     z-index: 900;
     background-color: $header-bg-color;
-    backdrop-filter: blur(20px); /*blur the background*/
-    box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /*blur the background*/
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -37,7 +37,7 @@
     }
     a{ 
         width: 100%;
-        @include hover-bg($color-m);
+        @include hover-bg($color-3);
         
     }
     li{
@@ -53,9 +53,6 @@
 }
 nav {
     ul{
-    position: fixed;
-    background-color: aliceblue;
-    z-index: 888;
     width: 100%;
     list-style: none;
     display: flex;
@@ -84,15 +81,12 @@ nav {
         display: flex;
         align-items: center;
         color: black;
-        @include hover-bg($color-m);
-        
+        @include hover-bg($color-3);
     }
 }
 
     @include desktop(){
     nav ul{
-        position: fixed;
-        background-color: aliceblue;
         flex-direction: row;
         justify-content: flex-end;
     }
