@@ -245,16 +245,6 @@ main {
       animation: 1s spin infinite linear;
     }
   }
-
-  @keyframes spin {
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
-
   figure {
     @include flex(row wrap);
     width: 100%;
@@ -337,3 +327,12 @@ main {
     margin: 0.8rem;
   }
 }
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+

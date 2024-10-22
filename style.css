@@ -273,14 +273,6 @@ main .loading img {
   width: 100%;
   animation: 1s spin infinite linear;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 main figure {
   display: flex;
   flex-flow: row wrap;
@@ -380,6 +372,14 @@ main h3 {
   margin: 0.8rem;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 footer {
   height: 200px;
   /* height: auto; */
