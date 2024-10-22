@@ -149,10 +149,7 @@ main {
     > article {
       max-width: 150px;
       margin: 10px;
-      /*prevent wierd border*/
-      box-shadow: 1px -1px #000;
-      border-right: none;
-      border-top: none;
+      border: 1px solid #000;
       figure {
         border-bottom: 1px solid #000;
       }
