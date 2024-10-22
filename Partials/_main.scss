@@ -61,17 +61,35 @@ main {
   }
   section.products-header {
     width: 100%;
-    background-color: $color-4;
+    background-color: $color-3;
     padding: 0px !important;
-
+    h1{
+      margin-bottom: 0px;
+    }
     .thing {
       width: 100%;
-      background-color: $color-1;
-      border-top: 1px solid #000;
+      // border-top: 1px solid #000;
       border-bottom: 1px solid #000;
-      #toggle {
+      input[type="checkbox"] {
+        cursor: pointer;
+        appearance: none;
+        height: 20px;
+        width: 20px;
+        border-bottom: 3px solid #000;
+        border-right: 3px solid #000;
+        transform: rotate(45deg);
+        transition: 0.2s;
+        margin: 5px 10px 0px 10px;
+      }
+      input[type="checkbox"]:checked {
+        margin: 15px 10px 0px 10px;
+        transform: rotate(225deg);
+        transition: 0.2s;
+      }
+      input[type="checkbox"]:checked ~ .product-row {
         display: none;
       }
+
       .product-row {
         width: 100%;
         max-width: none;
@@ -83,44 +101,29 @@ main {
           color: #000;
           text-decoration: none;
           font-size: $medium;
-          background-color: $color-1;
           transition: 0.2s;
           &:hover {
             transition: 0.2s;
-            background-color: $color-2;
+            background-color: $color-4;
           }
           &:active {
             transform: scale(0.93);
             box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
           }
         }
-        input[type="checkbox"] {
-          cursor: pointer;
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-bottom: 3px solid #000;
-          border-right: 3px solid #000;
-          transform: rotate(45deg);
-          transition: 0.2s;
-          margin: 5px 10px 0px 10px;
-        }
-        input[type="checkbox"]:checked {
-          margin: 15px 10px 0px 10px;
-          transform: rotate(225deg);
-          transition: 0.2s;
-        }
-        input[type="checkbox"]:checked ~ .product-row {
-          display: none;
-        }
       }
       @include desktop() {
+        #toggle {
+          display: none;
+       }
         > .product-row {
+          display: flex !important;
           @include flex(row nowrap !important);
           a {
             width: fit-content;
             padding: 15px;
           }
+
         }
       }
 
@@ -130,9 +133,6 @@ main {
   .product-row {
     @include flex(row wrap);
     max-width: 900px;
-    * {
-      // text-align: start;
-    }
     width: 100%;
     > article {
       max-width: 150px;
