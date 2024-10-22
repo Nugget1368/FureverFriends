@@ -335,6 +335,7 @@ main .contactpage-wrapper form .buttons .btn:last-child {
   }
 }
 footer {
+  font-family: "Poppins", sans-serif;
   height: 200px;
   /* height: auto; */
   width: 100%;
@@ -399,6 +400,7 @@ footer .footer-wrapper .footer-upper .footer-links {
   }
 }
 footer .footer-wrapper .footer-upper .footer-links ul li {
+  font-family: "Montserrat", sans-serif;
   list-style: none;
   margin-bottom: 8px;
   text-align: right;
