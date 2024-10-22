@@ -6,11 +6,28 @@
     overflow-x: hidden; /* Prevents horizontal scrolling */
     
 }
+
+.main-header{
+    position: sticky;
+    top:0;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    nav{
+        @include flex(row, space-between, center);
+        ul{
+            width: auto;
+        }
+    }
+}
 .showontop {
-    position: fixed;   /* Makes the element stay in a fixed position */
-    top: 19px;
-    left: 18vw;        /* Align the image on the left side */
-    z-index: 1000;     /* Ensures the logo stays on top of other elements */
+    width: 200px;
+    img{
+        width: 100%;
+    }
+    // position: fixed;   /* Makes the element stay in a fixed position */
+    // top: 19px;
+    // left: 35%;        /* Align the image on the left side */
+    // z-index: 1000;     /* Ensures the logo stays on top of other elements */
 }
 .cart {
     right: 4vw;
@@ -23,7 +40,7 @@
     top: 0;
     left: 0;
     height: 100vh;
-    width: 250px;
+    width: 150px;
     z-index: 900;
     background-color: $header-bg-color;
     backdrop-filter: blur(10px); /*blur the background*/
@@ -76,7 +93,8 @@ nav {
     }
     a{
         height: 100%;
-        padding: 10px 40px;
+        margin-left:10px;
+         padding: 10px 10px;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -99,10 +117,10 @@ nav {
     }
     
     .showontop {
-        position: fixed;   /* Makes the element stay in a fixed position */
+        // position: fixed;   /* Makes the element stay in a fixed position */
         
-        left: 4vw;        /* Align the image on the left side */
-        z-index: 1000;     /* Ensures the logo stays on top of other elements */
+        // left: 4vw;        /* Align the image on the left side */
+        // z-index: 1000;     /* Ensures the logo stays on top of other elements */
     }
 }
 

@@ -6,11 +6,27 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+}
+.main-header nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header nav ul {
+  width: auto;
+}
+
 .showontop {
-  position: fixed; /* Makes the element stay in a fixed position */
-  top: 19px;
-  left: 18vw; /* Align the image on the left side */
-  z-index: 1000; /* Ensures the logo stays on top of other elements */
+  width: 200px;
+}
+.showontop img {
+  width: 100%;
 }
 
 .cart {
@@ -24,7 +40,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 250px;
+  width: 150px;
   z-index: 900;
   background-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(10px);
@@ -77,7 +93,8 @@ nav li:first-child {
 }
 nav a {
   height: 100%;
-  padding: 10px 40px;
+  margin-left: 10px;
+  padding: 10px 10px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -97,11 +114,6 @@ nav a:hover {
   }
   .menu-button {
     display: none;
-  }
-  .showontop {
-    position: fixed; /* Makes the element stay in a fixed position */
-    left: 4vw; /* Align the image on the left side */
-    z-index: 1000; /* Ensures the logo stays on top of other elements */
   }
 }
 main {
@@ -421,149 +433,6 @@ footer .footer-wrapper .footer-bottom p {
   margin: 15px 0 10px 0;
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(#678ea0 100%, #a2d2ff, #ffafcc);
-  background-repeat: no-repeat;
-}
-
-header {
-  background-color: cyan;
-  color: black;
-  padding: 15px;
-  text-align: center;
-}
-
-main {
-  padding: 15px;
-}
-
-h2 {
-  color: #4c4eaf;
-}
-
-.testimonials, .partnerships, .success-stories, .cta {
-  background: white;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial, .partner, .story {
-  display: block; /* stack items for mobile version */
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-img {
-  width: 120px; /* smaller img size for mobile*/
-  border-radius: 10%;
-  margin: o auto 15px;
-}
-
-blockquote {
-  margin: 0;
-  font-style: italic;
-}
-blockquote span {
-  font-weight: 900;
-  font-size: large;
-  color: #3210f1;
-}
-
-.rating {
-  color: #ffcc00; /* Gold color for stars */
-  font-size: 1.2em;
-  margin-left: 20px;
-}
-
-.cta {
-  text-align: center;
-  background-color: #ffcc00; /* Light orange */
-  padding: 30px;
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 10px auto; /* center the button*/
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-}
-
-.main-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.customers {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 90%;
-}
-
-.testimonial {
-  width: 40%;
-  border: 3px cyan solid;
-  padding: 30px 30px 30px 30px;
-}
-
-@media (min-width: 768px) {
-  .testimonials, .partnerships, .success-stories {
-    display: flex; /* Display items side by side */
-    align-items: center;
-  }
-  img {
-    width: 150px; /* Larger image size for tablets */
-    margin-right: 20px;
-  }
-  .cta {
-    padding: 20px;
-  }
-  button {
-    width: auto;
-    padding: 12px 25px;
-  }
-}
-@media (min-width: 1024px) {
-  main {
-    max-width: 1200px;
-    margin: 0 auto; /*center the content*/
-    padding: 20px;
-  }
-  .testimonials, .partnerships, .success-stories {
-    padding: 20px;
-    justify-content: space-between;
-  }
-  img {
-    width: 180px; /* little larger size for tablet from 100 to 120*/
-  }
-  .cta {
-    padding: 40px;
-  }
-  footer {
-    padding: 15px;
-  }
-}
 html, body {
   margin: 0px;
   min-height: 100vh;
