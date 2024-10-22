@@ -1,15 +1,16 @@
 main {
   @include flex(column, flex-start);
   #to-top{
+    position: sticky;
+    bottom: 10px;
+    left: 90%;
     color: #000;
     text-decoration: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     z-index: 2;
     background-color: #d0d0d0;
     border-radius: 50%;
     font-size: 50px;
+    margin: 20px;
   }
   
   article.about-card {
