@@ -30,7 +30,7 @@ footer {
                 width: 50%;
                 height: 100%;
                 font-size: 2rem;
-
+                
                 @include desktop {          
                     width: 33%;
                 }
@@ -46,6 +46,7 @@ footer {
                 @include desktop {
                     justify-content: flex-end;
                     width: 33%;
+                    flex-shrink: 0;
                 }
 
                 ul li {
