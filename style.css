@@ -19,12 +19,12 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 250px;
+  width: 200px;
   z-index: 900;
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /*blur the background*/
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px); /*blur the background*/
+  box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -36,7 +36,11 @@
   width: 100%;
 }
 .sidebar a:hover {
-  background-color: #a2d2ff;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+  background-color: rgb(0, 255, 250);
+  border-radius: 15px; /* To avoid sharp corners */
+  transition: all 0.4s ease; /* Smooth transition */
+  overflow: hidden; /* Keeps hover effect within the button */
 }
 .sidebar li {
   width: 100%;
@@ -51,6 +55,9 @@
 }
 
 nav ul {
+  position: fixed;
+  background-color: aliceblue;
+  z-index: 888;
   width: 100%;
   list-style: none;
   display: flex;
@@ -77,11 +84,17 @@ nav a {
   color: black;
 }
 nav a:hover {
-  background-color: #a2d2ff;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+  background-color: rgb(0, 255, 250);
+  border-radius: 15px; /* To avoid sharp corners */
+  transition: all 0.4s ease; /* Smooth transition */
+  overflow: hidden; /* Keeps hover effect within the button */
 }
 
 @media (width > 998px) {
   nav ul {
+    position: fixed;
+    background-color: aliceblue;
     flex-direction: row;
     justify-content: flex-end;
   }
