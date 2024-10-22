@@ -374,6 +374,44 @@ main .contactpage-wrapper form .buttons .btn:last-child {
   }
 }
 
+.btn {
+  border: 2px solid #58aeff;
+  width: 100%;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  background-color: #a2d2ff;
+  border-radius: 3px;
+  transition: 0.1s;
+  color: #000;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #bde0fe;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.93);
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
+  background-color: #ddefff;
+  text-decoration: none;
+  color: #000;
+}
+
+@keyframes gradient-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 footer {
   font-family: "Poppins", sans-serif;
   height: 200px;
