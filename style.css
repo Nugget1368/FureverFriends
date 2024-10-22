@@ -78,11 +78,11 @@ main section.products-header {
 main section.products-header h1 {
   margin-bottom: 0px;
 }
-main section.products-header .thing {
+main section.products-header .top-field {
   width: 100%;
   border-bottom: 1px solid #000;
 }
-main section.products-header .thing input[type=checkbox] {
+main section.products-header .top-field input[type=checkbox] {
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -95,15 +95,15 @@ main section.products-header .thing input[type=checkbox] {
   transition: 0.2s;
   margin: 5px 10px 0px 10px;
 }
-main section.products-header .thing input[type=checkbox]:checked {
+main section.products-header .top-field input[type=checkbox]:checked {
   margin: 15px 10px 0px 10px;
   transform: rotate(225deg);
   transition: 0.2s;
 }
-main section.products-header .thing input[type=checkbox]:checked ~ .product-row {
+main section.products-header .top-field input[type=checkbox]:checked ~ .product-row {
   display: none;
 }
-main section.products-header .thing .product-row {
+main section.products-header .top-field .product-row {
   width: 100%;
   max-width: none;
   display: flex;
@@ -111,7 +111,7 @@ main section.products-header .thing .product-row {
   justify-content: center;
   align-items: center;
 }
-main section.products-header .thing .product-row > a {
+main section.products-header .top-field .product-row > a {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -123,26 +123,26 @@ main section.products-header .thing .product-row > a {
   font-size: 18px;
   transition: 0.2s;
 }
-main section.products-header .thing .product-row > a:hover {
+main section.products-header .top-field .product-row > a:hover {
   transition: 0.2s;
   background-color: #bde0fe;
 }
-main section.products-header .thing .product-row > a:active {
+main section.products-header .top-field .product-row > a:active {
   transform: scale(0.93);
   box-shadow: inset 2px 2px #fff, inset -2px -2px #fff;
 }
 @media (width > 998px) {
-  main section.products-header .thing #toggle {
+  main section.products-header .top-field #toggle {
     display: none;
   }
-  main section.products-header .thing > .product-row {
+  main section.products-header .top-field > .product-row {
     display: flex !important;
     display: flex;
     flex-flow: row nowrap !important;
     justify-content: center;
     align-items: center;
   }
-  main section.products-header .thing > .product-row a {
+  main section.products-header .top-field > .product-row a {
     width: -moz-fit-content;
     width: fit-content;
     padding: 15px;
