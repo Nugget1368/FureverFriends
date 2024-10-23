@@ -205,7 +205,8 @@ main section:not(section.hero) {
 }
 main section.products-header {
   width: 100%;
-  background-color: #a2d2ff;
+  background-color: #e6f7f5;
+  color: #005b5e;
   padding: 0px !important;
 }
 main section.products-header h1 {
@@ -257,7 +258,7 @@ main section.products-header .top-field .product-row > a {
 }
 main section.products-header .top-field .product-row > a:hover {
   transition: 0.2s;
-  background-color: #bde0fe;
+  background-color: #fde4cb;
 }
 main section.products-header .top-field .product-row > a:active {
   transform: scale(0.93);
