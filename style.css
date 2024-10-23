@@ -357,7 +357,7 @@ main .section-wrapper article > div {
   margin: 0px;
 }
 main .section-wrapper article figure {
-  height: 400px;
+  max-height: 400px;
 }
 main .section-wrapper article .body {
   display: flex;
@@ -517,6 +517,7 @@ main aside {
   align-items: center;
   box-sizing: border-box;
   padding: 10px;
+  width: 100%;
 }
 main h2 {
   width: 100%;

@@ -204,8 +204,8 @@ main {
         padding: 0px;
         margin: 0px;
       }
-      figure{
-        height: 400px;
+      figure {
+        max-height: 400px;
       }
       .body {
         @include flex();
@@ -300,6 +300,7 @@ main {
     background-color: $white;
     max-width: $max-width;
     min-width: $min-width;
+    
     aside {
       @include flex();
       background-color: $color-2;
@@ -346,6 +347,7 @@ main {
     @include flex();
     box-sizing: border-box;
     padding: 10px;
+    width: 100%;
   }
 
   h2 {
