@@ -686,8 +686,6 @@ footer .footer-wrapper .footer-bottom p {
   margin: 15px 0 10px 0;
 }
 
-/* General styles */
-/* General styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
@@ -698,7 +696,7 @@ body {
 .r-header {
   text-align: center;
   background-color: #e6f7f5;
-  padding: 20px;
+  padding: 5px;
 }
 
 .r-h1, .r-h2 {
