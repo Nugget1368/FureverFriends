@@ -1,7 +1,5 @@
 
 main {
-  // font-family: "Montserrat", serif;
-  font-family: "Poppins", sans-serif;
   @include flex(column, flex-start);
   #to-top {
     position: sticky;
@@ -17,10 +15,16 @@ main {
   }
 
   article.about-card {
+    header{
+      width: 100%;
+    }
     p {
       text-align: start;
       width: 100%;
       margin: 0.3rem;
+    }
+    h3{
+      width:auto;
     }
   }
   
