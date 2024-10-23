@@ -158,6 +158,9 @@ main section.hero {
     background-image: linear-gradient(transparent 80%, #ffafcc, #a2d2ff), url("/Images/hero imagewith text.png");
     background-size: 100% 100%;
   }
+  main section.hero.forest-hero {
+    background-image: linear-gradient(transparent 50%, #ffafcc, #a2d2ff), url("/Images/forest.png");
+  }
 }
 main section.hero article {
   background-color: #ddefff;
