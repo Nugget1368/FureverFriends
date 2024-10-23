@@ -1,11 +1,4 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  }
-  
+ 
   .r-header {
     text-align: center;
     background-color: #e6f7f5;
@@ -85,7 +78,7 @@ body {
   }
   
   // Media queries for larger screens
-  @media (min-width: 768px) {
+  @include desktop() {
     .r-customers {
       flex-direction: row;
       flex-wrap: wrap;
